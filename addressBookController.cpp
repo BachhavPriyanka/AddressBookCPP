@@ -12,7 +12,7 @@ class Operations
         {
             while(flag == 1)
             {
-                cout << "\n1.Create Contact  \n2.Exit";
+                cout << "\n1.Add New Contact  \n2.Exit" << endl;
                 std::cin>>choice;
                 switch(choice)
                 {
