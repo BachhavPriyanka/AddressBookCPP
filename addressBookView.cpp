@@ -118,4 +118,37 @@ void AddressBookView ::editData(vector<Person> &vecList)
     }
 }
 
+void AddressBookView ::deleteData(vector<Person> &vecList)
+{
+
+    string fname, lname;
+    bool deleted = false;
+    cout << "Enter First Name :";
+    cin >> fname;
+    cout << "Enter last Name :";
+    cin >> lname;
+
+    auto person = vecList.begin();
+    while (person != vecList.end())
+    {
+        auto count = person++;
+        if (fname == count->getFName() && lname == count->getLName())
+        {
+            vecList.erase(count);
+            deleted = true;
+            break;
+        }
+    }
+    if(deleted == true) {
+        cout << " Record Deleted " << endl;
+    } 
+    else {
+        cout << " Match Not Found" << endl;
+    }
+
+     for(auto i=vecList.begin(); i != vecList.end(); ++i)
+     {
+        i->display();
+     }
+}
     
