@@ -42,6 +42,12 @@ Person :: Person(string fName, string lName, string address, string city, string
     this->zipCode = zipCode;
 };
 
+void Person ::display(){
+    cout << "First Name : " << getFName() << " " << "| Last Name : " << " " <<getLName() << endl;
+    cout << "Address : " << getAddress() << " " << "| City : " << " " <<getCity() << " " <<"| State : " << getState() << " " << "| Zip Code : " <<getZipCode() << endl;
+    cout << "Email : " << getEmail() << " " << "| Phone Number : " << getPhoneNum()<< endl;
+}
+
 void Person ::setFName(string fName){
     this->fName = fName;
 }

@@ -12,7 +12,7 @@ class Operations
         {
             while(flag == 1)
             {
-                cout << "\n1.Add New Contact  \n2.Exit" << endl;
+                cout << "\n1.Add New Contact \n2.Edit Contact \n3.Display\n4.Exit" << endl;
                 std::cin>>choice;
                 switch(choice)
                 {
@@ -21,7 +21,11 @@ class Operations
                         vecList.push_back(details);
                         break;                    
                     }   
-                    case 2: flag = 0;
+                    case 2: addressBookView.editData(vecList);
+                        break;
+                    case 3: addressBookView.display(vecList);
+                        break;
+                    case 4: flag = 0;
                         break;
                     default:
                         cout << "Enter a correct Option";
